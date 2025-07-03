@@ -1,0 +1,634 @@
+/*---- diseño para cabecera----- */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff
+}
+
+header{
+  margin-top: 3rem;  
+  text-align: center;
+  background-color: #ffffff;
+}
+
+ main {
+    display: block;
+    background-color: #fff;
+  }
+.site_title {
+    font-family: 'Playfair Display', serif; 
+    font-size: 2.5em; 
+    color: #000;
+    font-weight: bold;
+    padding-bottom: 2rem;
+
+}
+
+/* color para muebles */
+
+.site_title .highlight {
+    color: #037bc0; 
+    font-weight: bold;
+}
+/* navegador */
+.navbar {
+    border-top: 0.1rem solid #e1e1e1;
+    
+}
+
+.nav-list {
+    list-style: none;
+    padding: 0.5rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 4rem;
+    align-items: center;
+    
+}
+
+.nav-item {
+    display: inline-block;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.1em;
+    font-weight: normal; 
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #007bff; /* Blue on hover, or a color of your choice */
+}
+
+@media (min-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    flex-direction: row;
+  }
+}
+
+/*------SECCION NOSOTROS (VERSION BLANCO)-----*/
+
+.title_nosotros{
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    padding-bottom: 2.5rem;
+
+}
+.contenedor_nosotros{
+    display: grid;
+    gap: 4rem; 
+    grid-template-columns: 1fr 2fr;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+
+    max-width: 80%; 
+    margin: 0 auto; 
+    align-items: start;
+    padding: 2rem;
+    background-color: #fff;
+}
+
+.info_nosotros{
+    overflow: hidden;
+}
+
+.info_nosotros img{
+    width: 100%; 
+    height: auto;
+    display: block; 
+}
+
+
+.text_nosotros{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 2.5rem;
+  gap: 0.5rem;
+  font-family:'Raleway', sans-serif ;
+  line-height: 2
+}
+
+@media (max-width: 768px) {
+    .contenedor_nosotros {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+        padding: 15px;
+    }
+
+    .info_nosotros {
+        width: 100%;
+    }}
+
+/*---- diseño para nuestros productos----------------- */
+
+.contenedor_productos h2{
+  text-align: center;
+  font-family: 'Playfair Display', serif;  
+  font-size: 2.5rem;
+  color: #000;
+  padding-bottom: 2rem;
+  font-weight: bold;
+}
+
+.contenedor_productos{
+  padding-top: 5rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+.tipo_productos{
+  display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+}
+
+  .producto:nth-child(1) {
+    grid-column-start: 1;
+    grid-column-end: 7;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    height: 27rem;
+  }
+
+  .producto:nth-child(1) img {
+    height: 27rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .producto:nth-child(2) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    width: 100%;
+  }
+
+  .producto:nth-child(2) img,
+  .producto:nth-child(3) img {
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .producto:nth-child(3) {
+    grid-column-start: 4;
+    grid-column-end: 7;
+  }
+
+.producto:nth-child(4) img,
+  .producto:nth-child(5) img,
+   .producto:nth-child(6) img{
+    height: 20rem;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .producto:nth-child(4) {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .producto:nth-child(5) {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  .producto:nth-child(6) {
+    grid-column-start: 5;
+    grid-column-end: 7;
+  }
+
+}
+
+.producto {
+  background-color: #037bc0;
+  margin-bottom: 2rem;
+}
+
+@media (min-width: 768px) {
+  .producto {
+    margin-bottom: 0;
+  }
+}
+
+.producto:last-of-type {
+  margin-bottom: 0;
+}
+
+.texto_producto {
+  text-align: center;
+  color: #ffffff;
+  padding: 2rem;
+}
+
+.texto_producto h3 {
+  margin: 0;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.texto_producto p {
+  margin: 0 0 0.5rem 0;
+  font-size: 1rem;
+}
+
+.add-to-cart-btn{
+  padding: 1rem 3rem;
+    border-radius: 5px;
+    font-size: 1.1em;
+    font-weight: bold;
+    display: flexbox;
+    border: none;
+    letter-spacing: 0.5px;
+    background-color: #8cbc00; 
+    color: #eee; 
+}
+
+.texto_producto .precio {
+  font-family:'Raleway', sans-serif;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+/*---- SECTOR GALERIA----- */
+.sector_galeria {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em; 
+    max-width: 80%; 
+    margin: 0 auto; 
+    padding: 2rem; 
+}
+
+.sector_galeria img {
+    width: 100%; 
+    height: 100%; 
+    object-fit: cover; 
+    display: block; 
+}
+/* Para pantallas más pequeñas*/
+@media (max-width: 768px) {
+    .sector_galeria {
+        grid-template-columns: repeat(1, 1fr); 
+    }
+
+}
+
+/*---- diseño del blog----- */
+* {
+  margin: 0;
+  padding: 0;
+  
+}
+
+.title_blog{
+  font-family:'Playfair Display', serif;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+/* Contenedor general */
+.container {
+  display: flex;
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* Sidebar */
+.sidebar {
+  flex: 1 1 250px;
+  background: #fff;
+  padding: 20px;
+  
+}
+
+.sidebar h3 {
+  margin-bottom: 15px;
+  font-size: 1.5em;
+  font-family:'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.sidebar ul li {
+  margin-bottom: 10px;
+  font-family:'Raleway', sans-serif;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #000;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Contenido principal */
+.content {
+  flex: 3 1 600px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* Posts */
+.post {
+  background: #fff;
+  padding: 20px;
+ 
+}
+
+.post h2 {
+  margin-bottom: 2rem;
+  font-family:'Playfair Display', serif;
+  font-weight: bold;
+}
+
+.post img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+.meta {
+  font-size: 1.2em;
+  color: #000;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-family:'Raleway', sans-serif;
+}
+
+.meta a {
+  color: #007acc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.meta a:hover {
+  text-decoration: underline;
+}
+
+.post p {
+  margin-bottom: 10px;
+  font-family:'Raleway', sans-serif;
+  line-height: 2rem;
+}
+
+.btn {
+  display:block;
+  background: #8cbc00;
+  color: #fff;
+  width: 70%;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  max-width: 400px;
+  text-decoration: none;
+  font-size: 1.2em;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family:'Raleway', sans-serif ;
+}
+
+.btn:hover {
+  background: #8cbc00;
+}
+
+/* para dispositivos */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .sidebar, .content {
+    flex: 1 1 100%;
+  }
+}
+
+/*-------- diseño del formulario------------- */
+
+.text-center{
+    text-align: center;
+    font-family:'Playfair Display', serif;
+    font-weight: bold;
+    padding-bottom: 2rem;
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
+
+.formulario{
+  background-color: #fff;
+  width: 40rem;
+  margin-right: auto ;
+  margin-left: auto;
+}
+
+.formulario fieldset {
+  border: 1.5px solid #000;
+  margin-top: 0%;
+  
+  
+}
+
+.formulario legend {
+  background-color: #005485;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-weight: bolder;
+  margin-bottom: 3rem;
+  padding: 1rem;
+}
+/*-----es el cuadro blanco----*/
+.form-group {
+  display: flex;
+  width: 90%;
+  font-family:'Raleway', sans-serif;
+  font-weight: 8rem;
+  padding:0 auto;
+}
+/*-------- PARTE TUS DATOS------------- */
+.form-group label {
+  margin: 1rem;
+  flex-basis: 5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  flex: 1;
+  width: 50px;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-group textarea {
+ min-height: 100px;
+  resize: vertical;
+  margin-bottom: 2rem;
+  }
+
+/*-------- PARTE PAIS------------- */
+
+.form-group select{
+  flex: 1;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    font-size: 1em;
+    margin-bottom: 2rem;
+}
+
+/*-------- PARTE INFORMACION EXTRA------------- */
+.radio-group {
+    justify-content:flex-start;
+    align-items: center;
+}
+
+.radio-group label {
+    flex-basis: 0;
+    padding: 0 auto;
+    width: auto; 
+}
+
+.radio-group input[type="radio"] {
+    margin-right: 0; 
+    width: 1rem; 
+    height: 1rem; 
+    cursor: pointer;  
+}
+
+.form-group input[type="text"]{
+    flex: 1;
+    padding: 0 auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+}
+
+.formulario input[type="submit"]{
+  display:block;
+  background: #8cbc00;
+  color: #fff;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  text-decoration: none;
+  font-size: 1em;
+  border-radius: 3px;
+  font-weight: bold;
+  font-family:'Raleway', sans-serif ;
+}
+
+@media (min-width: 768px) {
+  .formulario {
+    display: block;
+  }
+}
+
+/*---- diseño para pie de pagina----- */
+.footer-container {
+  border-top: 0.1rem solid #e1e1e1;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 40px 20px;
+            background-color: #fff;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-sizing: border-box; 
+        }
+
+        .footer-section {
+            flex: 1;
+            min-width: 250px;
+            margin: 20px;
+            box-sizing: border-box;
+        }
+
+        .footer-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin-bottom: 25px;
+            color: #000;
+            font-weight: 700;
+        }
+
+        .footer-section ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .footer-section ul li {
+            margin-bottom: 15px;
+        }
+
+        .footer-section ul li a {
+            text-decoration: none;
+            color: #000;
+            font-size: 18px;
+            transition: color 0.3s ease;
+        }
+
+        .footer-section ul li a:hover {
+            color: #000;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding: 20px;
+            background-color: #fff;
+            color: #777;
+            font-size: 16px;
+            border-top: 1px solid #eee;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .footer-section {
+                min-width: 100%;
+                text-align: center;
+                margin: 20px 0;
+            }
+
+            .footer-section h3 {
+                margin-bottom: 15px;
+            }
+
+            .footer-section ul li {
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-container {
+                padding: 30px 15px;
+            }
+
+            .footer-section h3 {
+                font-size: 24px;
+            }
+
+            .footer-section ul li a {
+                font-size: 16px;
+            }
+
+            .footer-bottom {
+                font-size: 14px;
+                padding: 15px;
+            }
+        }
